@@ -4,12 +4,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	void Update(){ // this is called before rendering a frame
-		Debug.Log("Called before rendering a frame");
+	private Rigidbody rb;
+	public float speed;
+
+	void Start(){
+		rb = GetComponent<Rigidbody> ();
 	}
+
+	//void Update(){ // this is called before rendering a frame
+	//	Debug.Log("Called before rendering a frame");
+	//}
 
 	void FixedUpdate(){ // called before performing any physics calculations
 		Debug.Log("Called before performing any physics calculations");
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+
+		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+
+		rb.AddForce (movement * speed);
 	}
+
+
 
 }
