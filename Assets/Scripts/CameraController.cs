@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
@@ -13,7 +12,7 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void LateUpdate(){
-		Debug.Log ("Update called after all rendering is finished");
+		//Debug.Log ("Update called after all rendering is finished");
 		transform.position = player.transform.position + offset;
 	}
 }
