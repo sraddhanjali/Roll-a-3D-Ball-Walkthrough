@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Incorporate A, B, C new features
 title: enhancement
 labels: ''
 assignees: sraddhanjali
